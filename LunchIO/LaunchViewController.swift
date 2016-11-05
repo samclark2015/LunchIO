@@ -36,7 +36,7 @@ class LaunchViewController: UIViewController {
 				}
 				
 				if let user = user {
-					User.currentUser = user
+					CurrentUser.user = user
 					initialViewController = storyboard.instantiateViewController(withIdentifier: "MainVC")
 					self.present(initialViewController, animated: true, completion: nil)
 				}

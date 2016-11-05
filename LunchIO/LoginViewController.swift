@@ -25,9 +25,9 @@ class LoginViewController: UIViewController {
 					return
 				}
 				
-				User.currentUser = user
-				print("^",User.currentUser?.name ?? "No User")
-				UserDefaults.standard.set(user.jwt, forKey: "loginToken")
+				CurrentUser.user = user
+				print("^",CurrentUser.user?.name ?? "No User")
+				UserDefaults.standard.set(user.token, forKey: "loginToken")
 				
 				let storyboard = UIStoryboard(name: "Main", bundle: nil)
 				let vc = storyboard.instantiateViewController(withIdentifier: "MainVC")

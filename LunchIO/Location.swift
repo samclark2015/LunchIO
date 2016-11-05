@@ -47,7 +47,7 @@ class Location: NSObject, MKAnnotation, Mappable {
 	
 	static func all(callback: @escaping (_ location: [Location]?, _ err: Error?)->Void) {
 		var headers = [String:String]()
-		if let token = User.currentUser?.jwt {
+		if let token = CurrentUser.user?.token {
 			headers["Authorization"] = "Bearer \(token)"
 		}
 		Alamofire.request(BaseModel.endpoint("locations"), method: .get, headers: headers)

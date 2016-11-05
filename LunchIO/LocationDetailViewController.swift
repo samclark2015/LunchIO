@@ -31,15 +31,11 @@ class LocationDetailViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		print("loaded")
 
         // Do any additional setup after loading the view.
 		
 		nearbyField.text = location.nearby
 		descField.text = location.desc
-
-		/*let f = self.view.frame
-		self.view.frame = CGRect(x: f.origin.x, y: f.origin.y, width: f.width, height: f.height/2)*/
 
     }
 
@@ -49,7 +45,6 @@ class LocationDetailViewController: UIViewController {
     }
 	
 	override func viewDidAppear(_ animated: Bool) {
-		print("will show")
 		if location.distance == nil {
 			let dirReq = MKDirectionsRequest()
 			dirReq.source = MKMapItem.forCurrentLocation()

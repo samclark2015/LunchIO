@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220C76441DCD94E700C4EFD2 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220C76431DCD94E700C4EFD2 /* CurrentUser.swift */; };
 		2227FBAE1D713F5B00767635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227FBAD1D713F5B00767635 /* AppDelegate.swift */; };
 		2227FBB31D713F5B00767635 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2227FBB11D713F5B00767635 /* Main.storyboard */; };
 		2227FBB51D713F5B00767635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2227FBB41D713F5B00767635 /* Assets.xcassets */; };
@@ -183,6 +184,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		220C76431DCD94E700C4EFD2 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		2227FBAA1D713F5B00767635 /* LunchIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2227FBAD1D713F5B00767635 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2227FBB21D713F5B00767635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -196,7 +198,7 @@
 		2227FBCD1D713F5C00767635 /* LunchIOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchIOUITests.swift; sourceTree = "<group>"; };
 		2227FBCF1D713F5C00767635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2227FBDB1D71406B00767635 /* LocationsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsPageViewController.swift; sourceTree = "<group>"; };
-		2227FBDD1D71416C00767635 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		2227FBDD1D71416C00767635 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Location.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2227FBE01D7141E100767635 /* LocationMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMasterViewController.swift; sourceTree = "<group>"; };
 		2227FBE11D7141E100767635 /* LocationMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationMasterViewController.xib; sourceTree = "<group>"; };
 		2227FBE61D71498E00767635 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -209,12 +211,12 @@
 		223D8EEF1D7288040048E38E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		22807EAD1DCD788700F8E623 /* ObjectMapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectMapper.xcodeproj; path = "../../../Downloads/ObjectMapper-master 2/ObjectMapper.xcodeproj"; sourceTree = "<group>"; };
 		22807EC91DCD7AC300F8E623 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../Downloads/Alamofire-master 4/Alamofire.xcodeproj"; sourceTree = "<group>"; };
-		22849F681D7D391B00A8D0E9 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		22849F681D7D391B00A8D0E9 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LaunchViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		22849F771D7D3BDA00A8D0E9 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		22849F791D7DE95900A8D0E9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		22849F7B1D7DED3F00A8D0E9 /* CheckinsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinsTableViewController.swift; sourceTree = "<group>"; };
 		22849F7C1D7DED3F00A8D0E9 /* CheckinsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckinsTableViewController.xib; sourceTree = "<group>"; };
-		22E667151D78B5D700899E4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		22E667151D78B5D700899E4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		22E667161D78B5D700899E4C /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -311,6 +313,7 @@
 				2227FBDD1D71416C00767635 /* Location.swift */,
 				2227FBE81D71543300767635 /* LocationImage.swift */,
 				223D8EEF1D7288040048E38E /* User.swift */,
+				220C76431DCD94E700C4EFD2 /* CurrentUser.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				223D8EEC1D7223A70048E38E /* CoordTransform.swift in Sources */,
 				2227FBDC1D71406B00767635 /* LocationsPageViewController.swift in Sources */,
 				2227FBE91D71543300767635 /* LocationImage.swift in Sources */,
+				220C76441DCD94E700C4EFD2 /* CurrentUser.swift in Sources */,
 				2227FBDE1D71416C00767635 /* Location.swift in Sources */,
 				2227FBAE1D713F5B00767635 /* AppDelegate.swift in Sources */,
 				223D8EF01D7288040048E38E /* User.swift in Sources */,

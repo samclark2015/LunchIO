@@ -9,7 +9,7 @@
 import UIKit
 
 class BaseModel: NSObject {
-	static private let baseURL = "192.168.33.10:8080"
+	static private let baseURL = "samclark.me:8080"
 	
 	static func endpoint(_ s: String)->String {
 		return "http://\(BaseModel.baseURL)/\(s)"
