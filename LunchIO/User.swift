@@ -55,11 +55,11 @@ class User: Mappable {
 	static func fetchInfo(token: String, callback: @escaping (_ l: CurrentUser?, _ err: Error? )->Void){
 		Alamofire.request(BaseModel.endpoint("users/verify"), method: .post, parameters: ["token": token], encoding: JSONEncoding.default).responseJSON { r in
 				if let err = r.result.error {
-					print(r.response ?? "No Response")
 					callback(nil, err)
 					return
 				}
 				if let json = r.result.value {
+					
 					if let user = Mapper<CurrentUser>().map(JSONObject: json) {
 						CurrentUser.user = user
 						callback(user, nil)

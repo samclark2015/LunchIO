@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A284a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationDetailViewController" customModule="LunchIO" customModuleProvider="target">
             <connections>
+                <outlet property="checkinsLabel" destination="KOW-DH-Sb3" id="zAZ-HH-JvM"/>
                 <outlet property="descField" destination="dtZ-yE-MZl" id="obD-Gg-q5R"/>
                 <outlet property="distanceField" destination="9OK-Nj-3Mk" id="sgC-8N-rB6"/>
                 <outlet property="distanceSpinner" destination="ifv-We-DuW" id="fGa-pi-EO1"/>
@@ -21,22 +25,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZd-zl-kGe">
+                    <rect key="frame" x="20" y="0.0" width="227" height="21.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtZ-yE-MZl">
+                    <rect key="frame" x="20" y="29.5" width="335" height="21.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </label>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ifv-We-DuW">
+                    <rect key="frame" x="335" y="1" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="58i-Wd-E25"/>
                         <constraint firstAttribute="width" constant="20" id="O2V-0p-bai"/>
                     </constraints>
                 </activityIndicatorView>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OK-Nj-3Mk">
+                    <rect key="frame" x="255" y="0.5" width="100" height="20.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="Uh7-wI-UXm"/>
                     </constraints>
@@ -45,6 +53,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4v-cs-aiz">
+                    <rect key="frame" x="255" y="617" width="100" height="30"/>
                     <state key="normal" title="Show in Maps">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -52,16 +61,25 @@
                         <action selector="mapsButton:" destination="-1" eventType="touchUpInside" id="U0i-qq-xOE"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOW-DH-Sb3">
+                    <rect key="frame" x="16" y="621.5" width="223" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <constraints>
+                <constraint firstItem="KOW-DH-Sb3" firstAttribute="centerY" secondItem="q4v-cs-aiz" secondAttribute="centerY" id="0FK-rV-bY3"/>
                 <constraint firstItem="9OK-Nj-3Mk" firstAttribute="leading" secondItem="MZd-zl-kGe" secondAttribute="trailing" constant="8" id="8jd-1R-sVM"/>
                 <constraint firstItem="MZd-zl-kGe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ALn-dd-FKb"/>
                 <constraint firstAttribute="trailing" secondItem="9OK-Nj-3Mk" secondAttribute="trailing" constant="20" id="FIl-dz-waF"/>
+                <constraint firstItem="q4v-cs-aiz" firstAttribute="leading" secondItem="KOW-DH-Sb3" secondAttribute="trailing" constant="16" id="MIM-SM-GWM"/>
                 <constraint firstAttribute="trailing" secondItem="q4v-cs-aiz" secondAttribute="trailing" constant="20" id="QjA-8X-5Zt"/>
+                <constraint firstItem="KOW-DH-Sb3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="S6n-V6-gOq"/>
                 <constraint firstItem="ifv-We-DuW" firstAttribute="centerY" secondItem="MZd-zl-kGe" secondAttribute="centerY" id="Udg-Bb-GvN"/>
                 <constraint firstAttribute="trailing" secondItem="dtZ-yE-MZl" secondAttribute="trailing" constant="20" id="b22-EP-SLE"/>
                 <constraint firstItem="9OK-Nj-3Mk" firstAttribute="centerY" secondItem="MZd-zl-kGe" secondAttribute="centerY" id="dj7-xB-Pnw"/>
-                <constraint firstItem="q4v-cs-aiz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="f4i-xu-h95"/>
+                <constraint firstItem="q4v-cs-aiz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="255" id="f4i-xu-h95"/>
                 <constraint firstItem="dtZ-yE-MZl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ioZ-AM-vfE"/>
                 <constraint firstAttribute="bottom" secondItem="q4v-cs-aiz" secondAttribute="bottom" constant="20" id="oaf-U5-38K"/>
                 <constraint firstAttribute="trailing" secondItem="ifv-We-DuW" secondAttribute="trailing" constant="20" id="rFP-f8-bhA"/>

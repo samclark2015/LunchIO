@@ -15,6 +15,7 @@ class LocationDetailViewController: UIViewController {
 	@IBOutlet weak var nearbyField: UILabel!
 	@IBOutlet weak var descField: UILabel!
 	@IBOutlet weak var distanceField: UILabel!
+	@IBOutlet weak var checkinsLabel: UILabel!
 	@IBOutlet weak var distanceSpinner: UIActivityIndicatorView!
 	@IBAction func mapsButton(_ sender: AnyObject?){
 		let regionSpan = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
@@ -36,6 +37,7 @@ class LocationDetailViewController: UIViewController {
 		
 		nearbyField.text = location.nearby
 		descField.text = location.desc
+		checkinsLabel.text = "\(location.checkins.count) checkins this hour"
 
     }
 

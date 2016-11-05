@@ -13,10 +13,11 @@ import ObjectMapper
 import CoreLocation
 
 class Location: NSObject, MKAnnotation, Mappable {
-	var name: String?
+	var name: String = ""
 	var nearby: String?
 	var desc: String?
 	var _id: String?
+	var checkins: [Any] = []
 	private var imageString: String?
 	private var imageShift: CGFloat?
 	var image: LocationImage? {
@@ -70,8 +71,25 @@ class Location: NSObject, MKAnnotation, Mappable {
 		
 	}
 	
-	func checkin(_ u: User){
-		print("\(u.name) checked into \(self.name)")
+	func checkin(callback: @escaping (_ err: Error?)->Void){
+		var headers = [String:String]()
+		if let token = CurrentUser.user?.token {
+			headers["Authorization"] = "Bearer \(token)"
+		}
+		guard let id = self._id else {
+			return
+		}
+		Alamofire.request(BaseModel.endpoint("locations/"+id), method: .post, headers: headers)
+			.validate()
+			.responseJSON { r in
+				switch r.result {
+				case .success:
+					callback(nil)
+				case .failure(let err):
+					callback(err)
+				}
+		}
+		
 	}
 	
 	required init?(map: Map){
@@ -86,6 +104,7 @@ class Location: NSObject, MKAnnotation, Mappable {
 		coords <- map["coords"]
 		nearby <- map["nearby"]
 		_id <- map["_id"]
+		checkins <- map["checkins"]
 	}
 	
 	/*static let locations = [

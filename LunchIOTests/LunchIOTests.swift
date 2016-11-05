@@ -32,5 +32,12 @@ class LunchIOTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+	
+	func testLogin(){
+		User.login(email: "slc2015@icloud.com", password: "12345") {
+			(user, err) in
+			if(err != nil){ XCTAssert(false, err as! String)} else {XCTAssert(true)}
+		}
+	}
     
 }

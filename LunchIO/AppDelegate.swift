@@ -46,7 +46,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func applicationDidBecomeActive(_ application: UIApplication) {
 		// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-		print("logout      \(UserDefaults.standard.bool(forKey:"logout_toggle"))")
+		if(UserDefaults.standard.bool(forKey:"logout_toggle")){
+			CurrentUser.user = nil
+			UserDefaults.standard.set(nil, forKey: "loginToken")
+			let newvc = LoginViewController()
+			UIView.transition(with: (self.window?.rootViewController?.view)!, duration: 0.5, options: .transitionFlipFromRight, animations: { _ in
+				self.window?.rootViewController = newvc
+			})
+			//self.window?.rootViewController?.present(LoginViewController(), animated: true)
+			UserDefaults.standard.set(false, forKey: "logout_toggle")
+		}
 	}
 
 	func applicationWillTerminate(_ application: UIApplication) {

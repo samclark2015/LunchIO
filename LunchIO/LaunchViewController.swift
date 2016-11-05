@@ -25,7 +25,7 @@ class LaunchViewController: UIViewController {
 			User.fetchInfo(token: token){
 				user, err in
 				if let err = err {
-					defaults.setNilValueForKey("loginToken")
+					defaults.set(nil, forKey: "loginToken")
 					let alert = UIAlertController(title: "Error", message: "\(err.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert);
 					alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: {
 						action in

@@ -14,8 +14,11 @@ class LocationMasterViewController: UIViewController {
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var gradientView: UIView!
 	@IBAction func checkin(_ sender: AnyObject) {
-		if let user = CurrentUser.user {
-			location.checkin(user)
+		location.checkin() {
+			err in
+			if let err = err {
+				print(err.localizedDescription)
+			}
 		}
 	}
 	
